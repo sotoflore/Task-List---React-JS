@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Formulario from "./components/Formulario";
 import Todos from "./components/Todos";
+import Typewriter from "./components/Typewriter";
 
 const initialStateTodos = JSON.parse(localStorage.getItem('todos')) || [];
 
@@ -39,6 +40,8 @@ const App = () => {
       })
    }
 
+  const words = ['React', 'JavaScript', 'Desarrollo Web'];
+  const speed = 100; //
 
   return (
     <div className="container mb-2">
@@ -49,6 +52,11 @@ const App = () => {
         deleteTodo={deleteTodo} 
         updateTodo={updateTodo} 
       />
+      <h2>
+          ¡Hola,{' '}
+        <Typewriter words={words} speed={speed} />
+        !
+      </h2>
     </div>
   );
 };

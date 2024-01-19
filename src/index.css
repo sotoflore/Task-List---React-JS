@@ -1,0 +1,10 @@
+.span::after {
+    content: '|';
+    animation: blink 0.7s infinite alternate;
+}
+
+@keyframes blink {
+    to {
+        opacity: 0;
+    }
+}
